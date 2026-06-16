@@ -54,7 +54,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0;
         }
 
         /* 로고 */
@@ -100,7 +99,7 @@
         /* ── 게임 목록 ── */
         .games {
             width: 100%;
-            max-width: 560px;
+            max-width: 680px;
             display: flex;
             flex-direction: column;
             gap: 1px;
@@ -116,7 +115,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 20px;
+            gap: 24px;
             transition: background 0.18s;
         }
 
@@ -131,14 +130,14 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.6);
         }
 
+        /* 아이콘 오른쪽 영역 */
         .game-info {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 12px;
-            min-width: 0;
+            gap: 14px;
         }
 
         .game-title {
@@ -146,11 +145,14 @@
             font-weight: 700;
         }
 
+        /* 배지 가로 나란히 */
         .store-links {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            flex-direction: row;
+            gap: 12px;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .store-badge {
@@ -160,9 +162,7 @@
             transition: opacity 0.15s;
         }
 
-        .store-badge:hover {
-            opacity: 0.75;
-        }
+        .store-badge:hover { opacity: 0.75; }
 
         /* ── FOOTER ── */
         footer {
@@ -187,7 +187,7 @@
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 480px) {
+        @media (max-width: 520px) {
             .logo { width: 220px; height: 220px; }
             .game-row { padding: 22px 20px; gap: 14px; }
             .game-icon { width: 72px; height: 72px; }
