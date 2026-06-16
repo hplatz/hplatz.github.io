@@ -39,7 +39,6 @@
             padding: 60px 20px 80px;
         }
 
-        /* 배경 노이즈 그라디언트 */
         .hero::before {
             content: '';
             position: absolute;
@@ -60,12 +59,12 @@
 
         /* 로고 */
         .logo-wrap {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 500px;
-            height: 500px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
@@ -74,19 +73,20 @@
 
         /* 팀명 */
         .team-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             line-height: 1;
             text-align: center;
-            margin-bottom: 8px; margin-top: 20px;
+            margin-bottom: 8px;
+            margin-top: 16px;
         }
 
         .tagline {
             font-size: 0.72rem;
             color: var(--muted);
-            letter-spacing: 0.12em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             text-align: center;
             margin-bottom: 48px;
@@ -97,7 +97,7 @@
             width: 1px;
             height: 40px;
             background: linear-gradient(to bottom, var(--border), transparent);
-            margin: 0 auto 64px;
+            margin: 0 auto 48px;
         }
 
         /* ── 게임 목록 ── */
@@ -115,11 +115,13 @@
 
         .game-row {
             background: var(--off-black);
-            padding: 24px 28px;
+            padding: 28px 32px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 14px;
             transition: background 0.18s;
+            text-align: center;
         }
 
         .game-row:hover {
@@ -127,42 +129,34 @@
         }
 
         .game-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 14px;
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
             object-fit: cover;
             flex-shrink: 0;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.6);
-        }
-
-        .game-info {
-            flex: 1;
-            min-width: 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.6);
         }
 
         .game-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .store-links {
             display: flex;
-            gap: 8px;
+            gap: 10px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 5px 14px;
+            padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.78rem;
+            font-size: 0.85rem;
             font-weight: 500;
             text-decoration: none;
             background: transparent;
-            color: var(--muted);
+            color: var(--soft);
             border: 1px solid var(--border);
             transition: color 0.15s, border-color 0.15s, background 0.15s;
             white-space: nowrap;
@@ -192,15 +186,16 @@
         }
 
         .contact-link:hover {
-            color: var(--muted);
+            color: var(--soft);
             border-color: var(--muted);
         }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 480px) {
-            .game-row { padding: 20px; gap: 14px; }
-            .game-icon { width: 52px; height: 52px; border-radius: 12px; }
-            .game-title { font-size: 0.92rem; }
+            .logo { width: 220px; height: 220px; }
+            .game-row { padding: 22px 20px; }
+            .game-icon { width: 72px; height: 72px; }
+            .game-title { font-size: 1rem; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -225,22 +220,18 @@
             <div class="games">
                 <div class="game-row">
                     <img src="img/escape.png" alt="Escape the Cult Mansion" class="game-icon">
-                    <div class="game-info">
-                        <div class="game-title">Escape the Cult Mansion</div>
-                        <div class="store-links">
-                            <a href="https://apps.apple.com/us/app/escape-the-cult-mansion/id6745683014" target="_blank" class="btn">App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.teamkuma.theescape_cultmansion" target="_blank" class="btn">Play Store</a>
-                        </div>
+                    <div class="game-title">Escape the Cult Mansion</div>
+                    <div class="store-links">
+                        <a href="https://apps.apple.com/us/app/escape-the-cult-mansion/id6745683014" target="_blank" class="btn">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.teamkuma.theescape_cultmansion" target="_blank" class="btn">Play Store</a>
                     </div>
                 </div>
 
                 <div class="game-row">
                     <img src="img/wauh.png" alt="WAUH - Find Escape Room" class="game-icon">
-                    <div class="game-info">
-                        <div class="game-title">WAUH — Find Escape Room</div>
-                        <div class="store-links">
-                            <a href="https://apps.apple.com/us/app/wauh-find-escape-room/id6751326457" target="_blank" class="btn">App Store</a>
-                        </div>
+                    <div class="game-title">WAUH — Find Escape Room</div>
+                    <div class="store-links">
+                        <a href="https://apps.apple.com/us/app/wauh-find-escape-room/id6751326457" target="_blank" class="btn">App Store</a>
                     </div>
                 </div>
             </div>
